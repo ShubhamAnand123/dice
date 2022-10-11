@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Baloo+Bhaina+2:wght@500&family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
+    
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+         
+
+        
+            
+
+
+        }
+        p{
+            font-family: 'Acme', sans-serif;
+            text-shadow: 1px 2px 0 rgb(159, 15, 15);
+
+            color:rgb(8, 204, 248);
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        .container{
+            width:100%;
+            margin:auto;
+            text-align: center;
+            padding: 20px; ;
+        }
+     body{
+        width:100%;
+        height:100vh;
+        background: radial-gradient(circle at 10% 20%, rgb(2, 38, 49) 0%, rgb(0, 69, 91) 90%);;
+     }
+     .dice{
+        display: inline-block;
+        text-align: center;
+        transition: 0.1s;
+
+
+     }
+     h1{
+        margin:30px;
+        text-shadow: 5px 5px 0 rgb(254, 3, 3);
+        font-size: 6rem;
+        color:rgb(145, 138, 2);
+        font-family: 'Acme', sans-serif;     }
+        button:hover{
+            background: rgb(116, 70, 2);
+            border-color: rgb(116, 70, 2);
+            box-shadow: none;
+
+        }
+        button{
+            padding:10px;
+             font-family: 'Acme', sans-serif;
+             background:#025704;
+             color: wheat;
+             width:150px;
+             font-size: 30px;
+             border-color: #025704;
+             border-radius: 8px;
+             box-shadow: 8px 4px 4px rgba(1,0,0,0.4);
+
+        }
+       
+    
+
+        img
+        {
+            width:200px;
+            padding: 50px;
+            transition: 0.1s;
+        }
+      
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>SA&nbsp; LUDO</h1>
+   
+
+        <div class="dice".>
+        <p>PLAYER-1</p>
+        <img src="3.png" id="c">
+    </div>
+
+    <div class="dice">
+        <p>PLAYER-2</p>
+        <img  id="b"src="6.png" >
+    </div>
+    <div>
+        <button onclick="ludo()">ROLL IT!</button>
+    </div>
+    </div>
+    <script>
+    ludo = ()=>{
+       const play =Math.floor(Math.random()*6)+1;
+        const plad=`${play}.png`;
+        document.getElementById("c").setAttribute('src',plad);
+
+
+        const play1 =Math.floor(Math.random()*6)+1;
+        const plad1=`${play1}.png`;
+        document.getElementById("b").setAttribute('src',plad1);
+
+        if(play>play1)
+        document.querySelector('h1').innerHTML="Player 1 WON!";
+        else if(play<play1)
+        document.querySelector('h1').innerHTML="Player 2 WON!";
+        else
+        document.querySelector('h1').innerHTML="DRAW !!";
+
+
+      
+    }
+
+
+
+    </script>
+    
+</body>
+</html>
